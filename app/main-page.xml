@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="navigatingTo" 
+      class="bg-gray-100">
+    <ActionBar title="Location Search" class="bg-blue-500 text-white">
+        <ActionItem text="Import KMZ" 
+                   tap="{{ onImportKmz }}" 
+                   ios.position="right" />
+    </ActionBar>
+    
+    <StackLayout class="p-4">
+        <Button text="Add Sample Data" 
+                tap="{{ onAddSampleData }}" 
+                class="mb-4 bg-blue-500 text-white p-3 rounded-lg" />
+        
+        <include src="~/components/search-bar.xml" />
+
+        <ListView items="{{ searchResults }}" 
+                  itemTap="{{ onLocationTap }}" 
+                  class="bg-transparent" 
+                  height="80%">
+            <ListView.itemTemplate>
+                <include src="~/components/location-item.xml" />
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GridLayout rows="auto" columns="*, auto" class="mb-4">
+    <TextField col="0" hint="Search location or ID" 
+              text="{{ searchQuery }}" 
+              textChange="{{ onSearchTextChanged }}" 
+              class="p-3 bg-white border rounded-lg" />
+    <Button col="1" text="Search" 
+            tap="{{ onSearch }}" 
+            class="ml-2 bg-green-500 text-white p-3 rounded-lg" />
+</GridLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GridLayout columns="*, auto" class="p-4 m-2 bg-white rounded-lg shadow">
+    <StackLayout col="0">
+        <Label text="{{ name }}" class="text-lg font-bold text-blue-800" />
+        <Label text="{{ 'ID: ' + id }}" class="text-sm text-gray-600" />
+        <Label text="{{ 'Coordinates: ' + latitude + ', ' + longitude }}" class="text-sm text-gray-500" />
+    </StackLayout>
+    <Button col="1" text="×" tap="{{ $parent.onDeleteLocation }}" class="text-red-500 font-bold text-xl" />
+</GridLayout>
